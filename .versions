@@ -28,7 +28,7 @@ html-tools@1.0.4
 htmljs@1.0.11
 http@1.4.1
 id-map@1.1.0
-jackstone:accounts-passwordless@0.2.6
+jackstone:accounts-passwordless@0.2.7
 jperl:match-ex@1.0.0
 jquery@1.11.10
 localstorage@1.2.0
