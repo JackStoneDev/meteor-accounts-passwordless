@@ -122,7 +122,7 @@ if(Meteor.isServer) {
     }
 
     // force pin to 8 digits
-    var code = Math.floor(Math.random() * 90000000) + 10000000;
+    var code = (Math.floor(Math.random() * 90000000) + 10000000).toString();
 
     // Generate a new code
     codes.upsert({ email: email }, { $set: { code: code }});
