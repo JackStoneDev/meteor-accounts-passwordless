@@ -1,11 +1,11 @@
-# meteor-accounts-passwordless
+# meteor-accounts-passwordless (fork of acemtp:accounts-passwordless)
 
 Passwords are broken. Passwordless is an open source Meteor package for token-based one-time password (OTPW) authentication, which is faster to deploy, better for your users, and more secure.
 
 ## Install
 
 ```
-meteor add acemtp:accounts-passwordless
+meteor add jackstone:accounts-passwordless
 ```
 
 ## Usage
@@ -105,7 +105,7 @@ Router.route('/login/:selector/:code', function () {
     code: this.params.code,
     selector: decodeURIComponent(this.params.selector)
   };
-  
+
   Meteor.loginWithPasswordless(options, function (error, result) {
       if (error) {
         console.error(error);
