@@ -1,6 +1,6 @@
 Package.describe({
   name: 'jackstone:accounts-passwordless',
-  version: '0.2.5',
+  version: '0.2.6',
   summary: 'Token-based one-time password (OTPW) authentication (nopassword, passwordless)',
   git: 'https://github.com/JackStoneDev/meteor-accounts-passwordless',
   documentation: 'README.md'
@@ -18,6 +18,5 @@ Package.onUse(function(api) {
 
   api.use(['random', 'jperl:match-ex@1.0.0'], 'server');
 
-  api.addFiles(['accounts-passwordless-ui.html', 'accounts-passwordless-ui.js'], 'client');
   api.addFiles('accounts-passwordless.js');
 });
