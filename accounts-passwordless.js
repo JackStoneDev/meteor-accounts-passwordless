@@ -59,7 +59,7 @@ if(Meteor.isServer) {
       subject: function (code) {
         return "Your verification code is " + code + " for " + Accounts.passwordless.emailTemplates.siteName;
       },
-      text: function (user, code) {
+      html: function (user, code) {
         var greeting = (user && user.username) ?
               ("Hello " + user.username + ",") : "Hello,";
         return greeting + "\n"
@@ -130,7 +130,7 @@ if(Meteor.isServer) {
       to: email,
       from: Accounts.passwordless.emailTemplates.from,
       subject: Accounts.passwordless.emailTemplates.sendVerificationCode.subject(code),
-      text: Accounts.passwordless.emailTemplates.sendVerificationCode.text(user, code, selector, options)
+      html: Accounts.passwordless.emailTemplates.sendVerificationCode.html(user, code, selector, options)
     });
   };
 
